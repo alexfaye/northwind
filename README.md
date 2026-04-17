@@ -30,8 +30,10 @@ We will be using MySQL version of Northwind sample database.
 
 ## Requirement Gathering
 * Define business processes.
-    * Sales overview
-    Overall sales reports to understand better our customers what is being sold, what sells the most where and what sales the least, the goal is to have a general overview of how the business is going.
+    * **Sales overview**: Overall sales reports to understand better our customers what is being sold, what sells the most where and what sales the least, the goal is to have a general overview of how the business is going.
+    * **Sales agent tracking**: Tracking sales and performance of each sales agent to adjust commissions, reward high achiever and empower low achievers.
+    * **Product inventory**: Understand the current inventory levels how to improve stock management, what suppliers to we have how much is being purchased. This will allow to understand stock management and potentially broker better deals with suppliers.
+    * **Customer reporting**: Allow customers to understand their purchase orders, how much and when are they buying, empowering them to make data driven decisions nad utilize the data to join to their sales data.
 * Conduct data profiling.
 * Create bus matrix high level entities.
 * Create naming conversion document.
