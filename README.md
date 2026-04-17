@@ -1,4 +1,4 @@
-# Northwind Analytics based on BigQuery, Dataform & Looker Studio
+# Northwind Analytics based on BigQuery, Dataform & Data Studio
 
 The Northwind database is a sample database created by Microsoft to demonstrate the features of some of its products and for training and tutorial purposes.
 
