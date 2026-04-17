@@ -50,6 +50,9 @@ Existing tables in OLTP system:
 
 ## Architecture Design
 The following is the high level entities bus matrix after the requirement gathering.
-| Business Process | product | orders | employees | customers | suppliers | date |
-| ---------------- | ------- | ------ | --------- | --------- | --------- | ---- |
-| Sales overview   | ✓       | ✓      | ✓         | ✓         | ✓         | ✓    |
+| Business Process   | product | orders | employees | customers | suppliers | date |
+| ------------------ | ------- | ------ | --------- | --------- | --------- | ---- |
+| Sales overview     | ✓       | ✓      | ✓         | ✓         | ✓         | ✓    |
+| Sales agents       | ✓       | ✓      | ✓         | ✓         | ✓         | ✓    |
+| Product inventory  | ✓       | ✓      |           |           | ✓         | ✓    |
+| Customer reporting | ✓       | ✓      | ✓         | ✓         | ✓         | ✓    |
