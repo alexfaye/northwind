@@ -6,9 +6,6 @@ The database contains all the sales data for Northwind Traders, a fictitious spe
 * Sales transactions between the company(Northwind traders) and its customers.
 * The purchase transactions between Northwind and its suppliers.
 
-We will be using MySQL version of Northwind sample database.
-* https://github.com/dalers/mywind
-
 ## User Case
 * Northwind Traders are export import company who trades around the world for speciality foods.
 * Their existing architecture is mostly a mix of on-premise & legacy systems, including their MySQL database which is primary operational database.
@@ -38,3 +35,21 @@ We will be using MySQL version of Northwind sample database.
 * Create bus matrix high level entities.
 * Create naming conversion document.
 * Create conceptual model.
+
+## Data Profiling
+Existing tables in OLTP system:
+* **customer**: Cusotmers buy food from Northwind.
+* **employees**: Works for Northwind.
+* **orders**: Sales Order transactions taking place between the customers & Northwind.
+* **order_details**: Order details for the orders placed by cusotmers.
+* **inventory_transactions**: Transaction details of each inventory.
+* **products**: Contains current Northwind products taht customers can purchase.
+* **shippers**: Ships orders from Northwind to customers.
+* **suppliers**: Supply Northwind with required items.
+* **invoices**: Invoice created for each other.
+
+## Architecture Design
+The following is the high level entities bus matrix after the requirement gathering.
+| Business Process | product | orders | employees | customers | suppliers | date |
+| ---------------- | ------- | ------ | --------- | --------- | --------- | ---- |
+| Sales overview   | ✓       | ✓      | ✓         | ✓         | ✓         | ✓    |
