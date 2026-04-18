@@ -1,4 +1,4 @@
 defaultProject: bigquery-test-march
-defaultDataset: dataform
+defaultDataset: northwind
 defaultAssertionDataset: dataform_assertions
 dataformCoreVersion: 3.0.42
