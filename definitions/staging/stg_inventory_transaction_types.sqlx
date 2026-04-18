@@ -1,0 +1,8 @@
+config {
+    type: "table",
+    name: "stg_inventory_transaction_types",
+    tags: ["sales_overview","sales_agents","product_inventory","customer_reporting"],
+    description: "This is the stage db for inventory transaction types."
+}
+
+select * from ${ref("inventory_transaction_types")}
