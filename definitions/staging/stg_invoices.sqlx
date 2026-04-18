@@ -5,4 +5,4 @@ config {
     description: "This is the stage db for invoices."
 }
 
-select * from ${ref("invoices")}
+select *, current_timestamp as ingestion_timestamp from ${ref("invoices")}

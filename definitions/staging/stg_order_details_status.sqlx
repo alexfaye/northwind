@@ -5,4 +5,4 @@ config {
     description: "This is the stage db for order details status."
 }
 
-select * from ${ref("order_details_status")}
+select *, current_timestamp as ingestion_timestamp from ${ref("order_details_status")}
