@@ -1,0 +1,8 @@
+config {
+    type: "table",
+    name: "stg_shippers",
+    tags: ["sales_overview","sales_agents","product_inventory"],
+    description: "This is the stage db for shippers"
+}
+
+select * from ${ref("shippers")}
