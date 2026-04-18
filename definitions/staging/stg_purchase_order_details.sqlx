@@ -1,0 +1,8 @@
+config {
+    type: "table",
+    name: "stg_purchase_order_details",
+    tags: ["sales_overview","sales_agents","product_inventory","customer_reporting"],
+    description: "This is the stage db for purchase order details."
+}
+
+select * from ${ref("purchase_order_details")}
