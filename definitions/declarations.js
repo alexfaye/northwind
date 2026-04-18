@@ -2,14 +2,24 @@
 // get the depencency graphy
 const tables=[
     {name:"customer", database:"bigquery-test-march", schema:"northwind_syd"},
+    {name:"employee_privileges", database:"bigquery-test-march", schema:"northwind_syd"},
     {name:"employees", database:"bigquery-test-march", schema:"northwind_syd"},
+    {name:"inventory_transaction_types", database:"bigquery-test-march", schema:"northwind_syd"},
+    {name:"inventory_transactions", database:"bigquery-test-march", schema:"northwind_syd"},
     {name:"invoices", database:"bigquery-test-march", schema:"northwind_syd"},
     {name:"orders", database:"bigquery-test-march", schema:"northwind_syd"},
     {name:"order_details", database:"bigquery-test-march", schema:"northwind_syd"},
+    {name:"order_details_status", database:"bigquery-test-march", schema:"northwind_syd"},
+    {name:"orders_status", database:"bigquery-test-march", schema:"northwind_syd"},
+    {name:"orders_tax_status", database:"bigquery-test-march", schema:"northwind_syd"},
+    {name:"privileges", database:"bigquery-test-march", schema:"northwind_syd"},
+    {name:"purchase_order_details", database:"bigquery-test-march", schema:"northwind_syd"},
+    {name:"purchase_order_status", database:"bigquery-test-march", schema:"northwind_syd"},
+    {name:"purchase_orders", database:"bigquery-test-march", schema:"northwind_syd"},
+    {name:"strings", database:"bigquery-test-march", schema:"northwind_syd"},
     {name:"products", database:"bigquery-test-march", schema:"northwind_syd"},
     {name:"shippers", database:"bigquery-test-march", schema:"northwind_syd"},
-    {name:"suppliers", database:"bigquery-test-march", schema:"northwind_syd"},
-    {name:"purchase_orders", database:"bigquery-test-march", schema:"northwind_syd"}
+    {name:"suppliers", database:"bigquery-test-march", schema:"northwind_syd"}
 ];
 
 //Function to generate the table declarations
