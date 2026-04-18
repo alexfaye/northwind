@@ -1,0 +1,8 @@
+config {
+    type: "table",
+    name: "stg_customers",
+    tags: ["sales_overview","sales_agents","customer_reporting"],
+    description: "This is the stage db for customers."
+}
+
+select * from ${ref("customer")}
