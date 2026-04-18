@@ -1,8 +1,8 @@
 config {
     type: "table",
-    name: "stg_order_status",
+    name: "stg_orders_status",
     tags: ["sales_overview","sales_agents","product_inventory","customer_reporting"],
     description: "This is the stage db for order status."
 }
 
-select * from ${ref("order_status")}
+select * from ${ref("orders_status")}
