@@ -5,4 +5,8 @@ config {
     description: "This is the stage db for products."
 }
 
-select *, current_timestamp as ingestion_timestamp from ${ref("products")}
+select * except(supplier_ids), 
+    cast(supplier_ids as int64) as supplier_id, 
+    current_timestamp as ingestion_timestamp
+from ${ref("products")}
+where supplier_ids not like '%;%'
