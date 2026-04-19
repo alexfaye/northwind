@@ -1,0 +1,34 @@
+config {
+    type: "table",
+    name: "dim_products",
+    tags: ["sales_overview","sales_agents","product_inventory","customer_reporting"],
+    description: "This is the warehouse db for products."
+}
+
+with base_table as ( 
+select 
+    p.id as product_id,
+    s.company as suppier_company,
+    p.product_code,
+    p.product_name,
+    p.description,
+    p.standard_cost,
+    p.list_price,
+    p.reorder_level,
+    p.target_level,
+    p.quantity_per_unit,
+    p.discontinued,
+    p.minimum_reorder_quantity,
+    p.category,
+    p.attachments,
+    current_timestamp() as insertion_timestamp
+from ${ref("stg_products")} p
+left join ${ref("stg_suppliers")} s
+on s.id=p.supplier_id
+),
+unique_row as (
+    select *, row_number() over(partition by product_id) as row_number
+    from base_table
+)
+
+select * except(row_number) from unique_row where row_number=1
