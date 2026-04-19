@@ -8,7 +8,7 @@ config {
 with base_table as ( 
 select 
     p.id as product_id,
-    s.company as suppier_company,
+    s.company as supplier_company,
     p.product_code,
     p.product_name,
     p.description,
