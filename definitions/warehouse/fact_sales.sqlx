@@ -2,7 +2,10 @@ config {
     type: "table",
     name: "fact_sales",
     tags: ["sales_overview","sales_agents","product_inventory","customer_reporting"],
-    description: "This is the warehouse db for sales fact."
+    description: "This is the warehouse db for sales fact.",
+    bigquery: {
+        partitionBy: "order_date"
+    }
 }
 
 with base_table as ( 
@@ -19,7 +22,7 @@ select
     od.date_allocated,
     od.purchase_order_id,
     od.inventory_id,
-    o.order_date,
+    date(o.order_date) as order_date,
     o.shipped_date,
     o.paid_date,
     current_timestamp() as insertion_timestamp
