@@ -73,3 +73,5 @@ For an easy development and implementation, we placed all the physical, logical,
 * Analytical layer:
 
 ![analytical layer](./includes/erd-analytical.png)
+
+Finanly it turned out to only 3 one-big-wide tables for all 4 analytical reports because in obt_sales_overview there is enough information to do both Sales overview and Sales agents business processes, while the other two one-big-wide tables (obt_customer_reporting and obt_product_inventory) can be worked for Customer reporting and Product inventory respectively.
