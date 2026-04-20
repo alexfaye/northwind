@@ -57,13 +57,19 @@ The following is the high level entities bus matrix after the requirement gather
 | Product inventory  | ✓       | ✓      |           |           | ✓         | ✓    |
 | Customer reporting | ✓       | ✓      | ✓         | ✓         | ✓         | ✓    |
 
+## Northwind Database Creation
+To build the database and tables, we used the northwind_oltp_bq_schema(create-tables-script).sql and nortwind_oltp_data(insert-data-script).sql in /includes to create the database tables and populate the records in each table.
+
 ## ER Diagram for Physical, Logical and Analytical Layers
 For an easy development and implementation, we placed all the physical, logical, analytical layer, along with the production envrironment in a single dataset named Northwind, each with different prefix.
 * Physical layer:
+
 ![physical layer](./includes/erd-physical.png)
 
 * Logical layer:
+
 ![logical layer](./includes/erd-logical.png)
 
 * Analytical layer:
+
 ![analytical layer](./includes/erd-analytical.png)
