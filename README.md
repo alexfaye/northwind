@@ -3,7 +3,7 @@
 The Northwind database is a sample database created by Microsoft to demonstrate the features of some of its products and for training and tutorial purposes.
 
 The database contains all the sales data for Northwind Traders, a fictitious specialty foods export-import company.
-* Sales transactions between the company(Northwind traders) and its customers.
+* Sales transactions between the company(Northwind Traders) and its customers.
 * The purchase transactions between Northwind and its suppliers.
 
 ## User Case
@@ -12,7 +12,7 @@ The database contains all the sales data for Northwind Traders, a fictitious spe
 * This is where all the sales transactions are recorded between company and it's customers.
 * Same MySQL database is also being used to generate reports & build analytics solutions.
 * They are struggling to keep up with reporting requirements and causing database to slow down impacting their day to day business.
-* Nortwind traders want to modernise their data & reporting sulutions % move away from on-premise solution slowly.
+* Nortwind traders want to modernise their data & reporting solutions % move away from on-premise solution slowly.
 * They want to modernise their existing infrastructure for:
     * Better scalability
     * Reduce load on operational systems
@@ -43,7 +43,7 @@ Existing tables in OLTP system:
 * **orders**: Sales Order transactions taking place between the customers & Northwind.
 * **order_details**: Order details for the orders placed by cusotmers.
 * **inventory_transactions**: Transaction details of each inventory.
-* **products**: Contains current Northwind products taht customers can purchase.
+* **products**: Contains current Northwind products that customers can purchase.
 * **shippers**: Ships orders from Northwind to customers.
 * **suppliers**: Supply Northwind with required items.
 * **invoices**: Invoice created for each other.

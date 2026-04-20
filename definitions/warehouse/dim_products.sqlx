@@ -2,7 +2,11 @@ config {
     type: "table",
     name: "dim_products",
     tags: ["sales_overview","sales_agents","product_inventory","customer_reporting"],
-    description: "This is the warehouse db for products."
+    description: "This is the warehouse db for products.",
+    assertions: {
+        nonNull: ["product_id"],
+        uniqueKey: ["product_id"]
+  }
 }
 
 with base_table as ( 
