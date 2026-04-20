@@ -2,7 +2,12 @@ config {
     type: "table",
     name: "dim_customers",
     tags: ["sales_overview","sales_agents","customer_reporting"],
-    description: "This is the warehouse db for customers."
+    description: "This is the warehouse db for customers.",
+    assertions: {
+        nonNull: ["customer_id"],
+        uniqueKey: ["customer_id"],
+        rowConditions: ['email_address like "%@%.%"']
+  }
 }
 
 with base_table as ( 
