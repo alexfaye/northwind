@@ -152,7 +152,7 @@ status_id	INT64
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `northwind_syd.products`
 (
-supplier_ids	STRING,
+supplier_ids	INT64,
 id	INT64,
 product_code	STRING,
 product_name	STRING,

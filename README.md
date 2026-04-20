@@ -1,6 +1,6 @@
 # Northwind Analytics based on BigQuery, Dataform & Data Studio
 
-The Northwind database is a sample database created by Microsoft to demonstrate the features of some of its products and for training and tutorial purposes.
+The Northwind database is a sample database created by Microsoft to demonstrate the features of some of its products and for training and tutorial purposes, with some minor corrections to make life easier.
 
 The database contains all the sales data for Northwind Traders, a fictitious specialty foods export-import company.
 * Sales transactions between the company(Northwind Traders) and its customers.
