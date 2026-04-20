@@ -12,7 +12,7 @@ The database contains all the sales data for Northwind Traders, a fictitious spe
 * This is where all the sales transactions are recorded between company and it's customers.
 * Same MySQL database is also being used to generate reports & build analytics solutions.
 * They are struggling to keep up with reporting requirements and causing database to slow down impacting their day to day business.
-* Nortwind traders want to modernise their data & reporting solutions % move away from on-premise solution slowly.
+* Nortwind traders want to modernise their data & reporting solutions and move away from on-premise solution slowly.
 * They want to modernise their existing infrastructure for:
     * Better scalability
     * Reduce load on operational systems
