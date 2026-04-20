@@ -57,3 +57,13 @@ The following is the high level entities bus matrix after the requirement gather
 | Product inventory  | ✓       | ✓      |           |           | ✓         | ✓    |
 | Customer reporting | ✓       | ✓      | ✓         | ✓         | ✓         | ✓    |
 
+## ER Diagram for Physical, Logical and Analytical Layers
+For an easy development and implementation, we placed all the physical, logical, analytical layer, along with the production envrironment in a single dataset named Northwind, each with different prefix.
+* Physical layer:
+![physical layer](./includes/erd-physical.png)
+
+* Logical layer:
+![logical layer](./includes/erd-logical.png)
+
+* Analytical layer:
+![analytical layer](./includes/erd-analytical.png)
