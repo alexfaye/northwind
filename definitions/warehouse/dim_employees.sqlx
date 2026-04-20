@@ -5,7 +5,7 @@ config {
     description: "This is the warehouse db for employees.",
     assertions: {
         nonNull: ["employee_id"],
-        uniqueKey: ["email_id"],
+        uniqueKey: ["employee_id"],
         rowConditions: ['email_address like "%@%.%"']
   }
 }
