@@ -53,7 +53,7 @@ The following is the high level entities bus matrix after the requirement gather
 | Business Process   | product | orders | employees | customers | suppliers | date |
 | ------------------ | ------- | ------ | --------- | --------- | --------- | ---- |
 | Sales overview     | ✓       | ✓      | ✓         | ✓         | ✓         | ✓    |
-| Sales agents       | ✓       | ✓      | ✓         | ✓         | ✓         | ✓    |
+| Sales reps         | ✓       | ✓      | ✓         | ✓         | ✓         | ✓    |
 | Product inventory  | ✓       | ✓      |           |           | ✓         | ✓    |
 | Customer reporting | ✓       | ✓      | ✓         | ✓         | ✓         | ✓    |
 
