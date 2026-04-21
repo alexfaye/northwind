@@ -1,0 +1,23 @@
+config {
+    type: "table",
+    name: "dim_status",
+    tags: ["sales_overview","sales_agents","customer_reporting"],
+    description: "This is the warehouse db for status.",
+    assertions: {
+        nonNull: ["status_id"],
+        uniqueKey: ["status_id"]
+  }
+}
+
+with base_table as ( 
+select 
+    id as status_id,
+    status,
+    current_timestamp() as insertion_timestamp
+from ${ref("stg_order_details_status")}),
+unique_row as (
+    select *, row_number() over(partition by status_id) as row_number
+    from base_table
+)
+
+select * except(row_number) from unique_row where row_number=1

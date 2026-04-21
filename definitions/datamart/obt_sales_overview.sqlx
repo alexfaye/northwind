@@ -41,6 +41,8 @@ select
     e.web_page          as employee_web_page,
     e.notes             as employee_notes,
     e.attachments       as employee_attachments,
+    sa.status_id,
+    sa.status,
     p.product_id,
     p.supplier_company,
     p.product_code,
@@ -59,7 +61,6 @@ select
     s.quantity,
     s.unit_price,
     s.discount,
-    s.status_id,
     s.date_allocated,
     s.purchase_order_id,
     s.inventory_id,
@@ -74,3 +75,5 @@ left join ${ref("dim_employees")} e
     on e.employee_id=s.employee_id
 left join ${ref("dim_products")} p
     on p.product_id=s.product_id
+left join ${ref("dim_status")} sa
+    on sa.status_id=s.status_id
