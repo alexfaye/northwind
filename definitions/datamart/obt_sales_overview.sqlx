@@ -74,3 +74,5 @@ left join ${ref("dim_employees")} e
     on e.employee_id=s.employee_id
 left join ${ref("dim_products")} p
     on p.product_id=s.product_id
+left join ${ref("dim_status")} sa
+    on sa.status_id=s.status_id
