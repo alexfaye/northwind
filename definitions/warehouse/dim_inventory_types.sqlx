@@ -1,0 +1,23 @@
+config {
+    type: "table",
+    name: "dim_inventory_types",
+    tags: ["product_inventory"],
+    description: "This is the warehouse db for inventory types.",
+    assertions: {
+        nonNull: ["transaction_type_id"],
+        uniqueKey: ["transaction_type_id"]
+  }
+}
+
+with base_table as ( 
+select 
+    id as transaction_type_id,
+    type_name as transaction_type,
+    current_timestamp() as insertion_timestamp
+from ${ref("stg_inventory_transaction_types")}),
+unique_row as (
+    select *, row_number() over(partition by transaction_type_id) as row_number
+    from base_table
+)
+
+select * except(row_number) from unique_row where row_number=1
