@@ -11,7 +11,7 @@ config {
 with base_table as (
 select
     id as inventory_id,
-    transaction_type,
+    transaction_type as transaction_type_id,
     date(transaction_created_date) as transaction_created_date,
     transaction_modified_date,
     product_id,
