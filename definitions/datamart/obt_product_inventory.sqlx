@@ -7,7 +7,7 @@ config {
 
 select
     i.inventory_id,
-    i.transaction_type as transaction_type_id,
+    i.transaction_type_id,
     it.transaction_type,
     i.transaction_created_date,
     i.transaction_modified_date,
@@ -33,4 +33,4 @@ from ${ref("fact_inventory")} i
 left join ${ref("dim_products")} p
     on p.product_id=i.product_id
 left join ${ref("dim_inventory_types")} it
-    on it.transaction_type_id=i.transaction_type
+    on it.transaction_type_id=i.transaction_type_id
