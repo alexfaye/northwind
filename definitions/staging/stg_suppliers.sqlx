@@ -1,7 +1,7 @@
 config {
     type: "table",
     name: "stg_suppliers",
-    tags: ["sales_overview","sales_agents","product_inventory"],
+    tags: ["sales_overview","sales_agents","product_inventory","supplier_performance"],
     description: "This is the stage db for suppliers."
 }
 
