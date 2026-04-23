@@ -12,6 +12,7 @@ config {
 with base_table as ( 
 select 
     p.id as product_id,
+    s.id as supplier_id,
     s.company as supplier_company,
     p.product_code,
     p.product_name,
