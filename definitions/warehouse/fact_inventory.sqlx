@@ -1,7 +1,7 @@
 config {
     type: "table",
     name: "fact_inventory",
-    tags: ["sales_overview","sales_agents","customer_reporting","product_inventory"],
+    tags: ["sales_overview","sales_agents","supplier_performance","product_inventory"],
     description: "This is the warehouse db for inventory fact.",
     bigquery: {
         partitionBy: "transaction_created_date"

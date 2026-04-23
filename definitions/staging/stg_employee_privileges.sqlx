@@ -1,7 +1,7 @@
 config {
     type: "table",
     name: "stg_employee_privileges",
-    tags: ["sales_overview","sales_agents","customer_reporting"],
+    tags: ["sales_overview","sales_agents","supplier_performance"],
     description: "This is the stage db for employee privileges."
 }
 

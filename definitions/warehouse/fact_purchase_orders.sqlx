@@ -1,7 +1,7 @@
 config {
     type: "table",
     name: "fact_purchase_orders",
-    tags: ["product_inventory"],
+    tags: ["product_inventory","supplier_performance"],
     description: "This is the warehouse db for purchase orders fact.",
     bigquery: {
         partitionBy: "creation_date"

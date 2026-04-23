@@ -1,8 +1,8 @@
 config {
     type: "table",
-    name: "obt_customer_reporting",
-    tags: ["customer_reporting"],
-    description: "This is the data mart db for customer reports."
+    name: "obt_purchase_supplier_performance",
+    tags: ["supplier_performance"],
+    description: "This is the data mart db for suppliers report."
 }
 
 select
@@ -74,8 +74,7 @@ select
     p.quantity_per_unit,
     p.discontinued,
     p.minimum_reorder_quantity,
-    p.category,
-    o.order_id
+    p.category
 from ${ref("fact_purchase_orders")} po
 left join ${ref("dim_customers")} c
     on c.customer_id=po.customer_id
@@ -83,5 +82,3 @@ left join ${ref("dim_employees")} e
     on e.employee_id=po.employee_id
 left join ${ref("dim_products")} p
     on p.product_id=po.product_id
-left join ${ref("dim_orders")} o
-    on o.product_id=p.product_id
