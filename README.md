@@ -30,7 +30,7 @@ The database contains all the sales data for Northwind Traders, a fictitious spe
     * **Sales overview**: Overall sales reports to understand better our customers what is being sold, what sells the most where and what sales the least, the goal is to have a general overview of how the business is going.
     * **Sales agent tracking**: Tracking sales and performance of each sales agent to adjust commissions, reward high achiever and empower low achievers.
     * **Product inventory**: Understand the current inventory levels, how to improve stock management, what suppliers we have, how much is being purchased. This will allow to understand stock management and potentially broker better deals with suppliers.
-    * **Customer reporting**: Allow customers to understand their purchase orders, how much and when are they buying, empowering them to make data driven decisions nad utilize the data to join to their sales data.
+    * **Customer reporting**: Allow purchase managers to understand their purchase orders, how much and when are they buying, empowering them to make data driven decisions nad utilize the data to join to their sales data.
 * Conduct data profiling.
 * Create bus matrix high level entities.
 * Create naming conversion document.
@@ -50,12 +50,12 @@ Existing tables in OLTP system:
 
 ## Architecture Design
 The following is the high level entities bus matrix after the requirement gathering.
-| Business Process   | product | orders | employees | customers | suppliers | date |
-| ------------------ | ------- | ------ | --------- | --------- | --------- | ---- |
-| Sales overview     | ✓       | ✓      | ✓         | ✓         | ✓         | ✓    |
-| Sales reps         | ✓       | ✓      | ✓         | ✓         | ✓         | ✓    |
-| Product inventory  | ✓       | ✓      |           |           | ✓         | ✓    |
-| Customer reporting | ✓       | ✓      | ✓         | ✓         | ✓         | ✓    |
+| Business Process         | product | orders | employees | customers | suppliers | date |
+| ------------------------ | ------- | ------ | --------- | --------- | --------- | ---- |
+| Sales overview           | ✓       | ✓      | ✓         | ✓         | ✓         | ✓    |
+| Sales reps               | ✓       | ✓      | ✓         | ✓         | ✓         | ✓    |
+| Product inventory        | ✓       | ✓      |           |           | ✓         | ✓    |
+| Purchase & Supplier Perf | ✓       |        | ✓         | ✓         | ✓         | ✓    |
 
 ## Northwind Database Creation
 To build the database and tables, we used the northwind_oltp_bq_schema(create-tables-script).sql and nortwind_oltp_data(insert-data-script).sql in /includes to create the database tables and populate the records in each table.
