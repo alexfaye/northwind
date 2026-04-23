@@ -37,17 +37,17 @@ select
     current_timestamp() as insertion_timestamp
     from ${ref("stg_purchase_orders")} po
     left join ${ref("stg_purchase_order_details")} pod
-    on po.id=pod.purchase_order_id
+        on po.id=pod.purchase_order_id
     left join ${ref("stg_products")} p
-    on p.id=pod.product_id
+        on p.id=pod.product_id
     left join ${ref("stg_order_details")} od
-    on od.product_id=p.id
+        on od.product_id=p.id
     left join ${ref("stg_orders")} o
-    on o.id=od.order_id
+        on o.id=od.order_id
     left join ${ref("stg_employees")} e
-    on e.id=po.created_by
+        on e.id=po.created_by
     left join ${ref("stg_customers")} c
-    on c.id=o.customer_id
+        on c.id=o.customer_id
 ),
 unique_row as (
     select *, row_number() over(partition by customer_id, employee_id, inventory_id, product_id, supplier_id,
