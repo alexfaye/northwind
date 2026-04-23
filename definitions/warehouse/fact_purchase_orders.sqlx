@@ -19,6 +19,8 @@ select
     pod.date_received,
     pod.posted_to_inventory,
     pod.inventory_id,
+    --since there is a supplier_id in dim_products, but we need to use the supplier_id from purchase_order
+    --becasue there might be some differences among the supplier_id
     po.supplier_id,
     po.created_by,
     po.submitted_date,
